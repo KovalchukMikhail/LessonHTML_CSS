@@ -1,39 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homewor003</title>
+    <title>Homewor004</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="top">
-        <div class="header">
+    <header class="header">
+        <div class="header_container">
             <img src="img/header_logo.png" alt="header_logo">
-            <div class="header_link">
-                <a class="header_menu_link" href="#">Home</a>
+            <nav class="nav_link">
+                <a class="header_home_link" href="#">Home</a>
                 <a class="header_menu_link" href="#">About Us</a>
                 <a class="header_menu_link" href="#">Services</a>
                 <a class="header_menu_link" href="#">Features</a>
                 <a class="header_menu_link" href="#">Team</a>
                 <a class="header_menu_link" href="#">Blog</a>
                 <a class="header_menu_link" href="#">Contact</a>
-            </div>
+            </nav>
         </div>
-        <div class="top_content">
+    </header>
+    <section class="top_content">
+        <div class="top_container">
             <div class="top_info">
-                <h1 class="title">SEO & Digital Marketing For Your Website.</h1>
-                <p class="text">Provide all kind of seo services and help to improve seo ranking. Globally incubate standards.</p>
+                <h1 class="top_title">SEO & Digital Marketing For Your Website.</h1>
+                <p class="top_text">Provide all kind of seo services and help to improve seo ranking. Globally incubate standards.</p>
                 <div class="top_buttons">
-                    <button class="button_start">Start Now</button>
-                    <button class="button_watch">Watch Video</button>
+                    <div class="button_start">
+                        <div class="big_button">
+                            <a class="big_button_text">Start Now</a>
+                        </div>
+                    </div>
+                    <a class="button_watch">Watch Video</a>
                 </div>
             </div>
-            <img src="img/top_img.png" alt="image">
+            <img class="top_img" src="img/top_img.png" alt="image">
         </div>
+    </section>
+    <footer class="footer">
         <div class="top_logos">
             <img src="img/logo1.png" alt="logo">
             <img src="img/logo2.png" alt="logo">
@@ -42,7 +53,7 @@
             <img src="img/logo5.png" alt="logo">
             <img src="img/logo6.png" alt="logo">
         </div>
-    </div>
+    </footer>
 </body>
 
 </html>
