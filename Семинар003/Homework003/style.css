@@ -240,7 +240,7 @@ a {
     height: 270px;
 }
 
-.about_description {
+.item_description {
     margin-top: 25px;
     margin-bottom: 39px;
     display: flex;
@@ -256,6 +256,7 @@ a {
 }
 
 .about_item {
+    padding-bottom: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
