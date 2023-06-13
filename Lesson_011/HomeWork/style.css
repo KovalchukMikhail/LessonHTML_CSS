@@ -16,6 +16,10 @@ body {
     padding-right: calc(50% - 570px);
 }
 
+img {
+    max-width: 100%;
+}
+
 .header {
     height: 75px;
     display: flex;
@@ -65,16 +69,14 @@ body {
 
 .top {
     background: #F1E4E6;
-    height: 764px;
-    display: grid;
-    grid-template-columns: 50% 50%;
+    max-height: 764px;
+    display: flex;
+    padding-left: calc(50% - 800px);
+    padding-right: calc(50% - 800px);
 }
 
 .top_item1 {
     display: flex;
-    justify-content: flex-end;
-    flex-direction: row;
-    align-items: flex-end;
 }
 
 .top_item2 {
@@ -97,11 +99,6 @@ body {
     grid-row: 1/span 2;
     background: #F16D7F;
     border: black solid 1px;
-}
-
-.catalog {
-    margin-top: 65px;
-    margin-bottom: 96px;
 }
 
 .top_title {
@@ -132,34 +129,37 @@ body {
 }
 
 .catalog {
-    display: grid;
-    grid-template-columns: repeat(3, 360px);
-    grid-template-rows: 260px 180px;
+    margin-top: 65px;
+    margin-bottom: 96px;
+    display: flex;
+    flex-direction: column;
+}
+
+.catalog_box {
+    display: flex;
+    justify-content: space-between;
     gap: 30px;
+    margin-bottom: 30px;
 }
 
 .catalog_item {
+    flex-grow: 1;
+    position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    height: 100%;
 }
 
-.catalog_item1 {
-    background-image: url(img/women_catalog_img.jpg);
-}
-
-.catalog_item2 {
-    background-image: url(img/men_catalog_img.jpg);
-}
-
-.catalog_item3 {
-    background-image: url(img/kids_catalog_img.jpg);
-}
-
-.catalog_item4 {
-    background-image: url(img/accesories_catalog_img.jpg);
-    grid-row: 2;
-    grid-column: 1/4;
+.catalog_text_box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .catalog_title {
@@ -266,4 +266,45 @@ body {
     line-height: 19px;
     color: #F26376;
     text-align: center;
+}
+
+@media (min-width: 768px) and (max-width: 1140px) {
+    .nav_link_additional {
+        margin-left: 32px;
+    }
+    .nav_link_main {
+        margin-right: 32px;
+    }
+    .top_item2 {
+        display: flex;
+        align-items: center;
+        padding-left: 39px;
+        padding-top: 0;
+    }
+    .top_title {
+        font-size: 44px;
+        line-height: 53px;
+    }
+    .top_subtitle {
+        font-size: 24px;
+        line-height: 29px;
+    }
+    .catalog {
+        margin-bottom: 110px;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    .catalog_box {
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+    .products_box {
+        margin-top: 73px;
+        margin-bottom: 33px;
+        grid-template-columns: repeat(2, 360px);
+        gap: 16px;
+    }
+    .product_button {
+        margin-bottom: 71px;
+    }
 }
