@@ -17,7 +17,8 @@ body {
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
+    display: block;
 }
 
 .header {
@@ -306,5 +307,106 @@ img {
     }
     .product_button {
         margin-bottom: 71px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .header {
+        height: 74px;
+    }
+    .person_icon {
+        display: none;
+    }
+    .cart_icon {
+        display: none;
+    }
+    .nav_link_additional {
+        margin-left: 16px;
+    }
+    .nav_link_main {
+        width: 32px;
+        height: 23px;
+        margin: 25px 16px 26px;
+    }
+    .top {
+        width: 100vw;
+        height: 363px;
+        justify-content: center;
+    }
+    .top_item1 {
+        display: none;
+    }
+    .top_item2 {
+        display: flex;
+        align-items: center;
+        padding: 0;
+    }
+    .top_lable {
+        min-width: 0;
+        height: 61px;
+        display: grid;
+        grid-template-columns: 12px 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .big_line {
+        grid-column: 1;
+        grid-row: 1/span 2;
+        background: #F16D7F;
+        border: black solid 1px;
+        margin: 4.5px 0;
+    }
+    .top_title {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 38px;
+        line-height: 46px;
+        color: #222222;
+        padding-left: 15px;
+    }
+    .top_subtitle {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        color: #222222;
+        display: flex;
+        padding-left: 15px;
+    }
+    .catalog {
+        margin: 64px 16px;
+        display: flex;
+    }
+    .catalog_box {
+        gap: 32px;
+        margin-bottom: 32px;
+        flex-direction: column;
+    }
+    .products_box {
+        margin-top: 65px;
+        margin-bottom: 41px;
+        margin-left: 8px;
+        margin-right: 8px;
+        grid-template-rows: auto;
+        grid-template-columns: 100%;
+        gap: 16px;
+    }
+    .product_text_box {
+        margin-bottom: 20px;
+    }
+    .product_text {
+        margin-top: 13px;
+        margin-bottom: 18px;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        color: #5D5D5D;
+    }
+    .catalog_img {
+        height: 111px;
+        object-fit: cover;
+    }
+    .product_button {
+        margin-bottom: 85px;
     }
 }
