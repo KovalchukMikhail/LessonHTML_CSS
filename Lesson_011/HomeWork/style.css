@@ -48,6 +48,81 @@ img {
     margin-bottom: 20px;
 }
 
+.link:hover path {
+    fill: #F16D7F
+}
+
+.main_menu {
+    position: relative;
+}
+
+.menu_bar_link:hover {
+    color: #F16D7F;
+}
+
+.menu_bar_title:hover {
+    color: black;
+}
+
+.menu_bar {
+    position: absolute;
+    top: -1000px;
+    right: 0px;
+    z-index: 1;
+    transition: right 0.6s;
+    width: 232px;
+    background: #FFFFFF;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    padding: 32px;
+    box-sizing: border-box;
+}
+
+.header_checkbox {
+    position: absolute;
+    visibility: hidden;
+    left: -9999999px;
+}
+
+.header_checkbox:checked~.menu_bar {
+    top: 47px;
+}
+
+.menu_bar_heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    margin-bottom: 4px;
+}
+
+.menu_bar_title {
+    display: block;
+    margin-bottom: 12px;
+    margin-top: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #F16D7F;
+}
+
+.menu_bar_link {
+    margin-left: 22px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6F6E6E;
+}
+
+.menu_bar_list {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
 .lable_icon {
     width: 44px;
 }
@@ -62,10 +137,12 @@ img {
 
 .person_icon {
     width: 29px;
+    height: 29px;
 }
 
 .cart_icon {
     width: 32px;
+    height: 29px;
 }
 
 .top {
@@ -85,6 +162,16 @@ img {
     justify-content: start;
     padding-top: 290px;
     padding-left: 63px;
+}
+
+.top_lable_link {
+    display: block;
+    transition: transform;
+    transition-duration: 1s;
+}
+
+.top_lable_link:hover {
+    transform: scale(1.1);
 }
 
 .top_lable {
@@ -150,6 +237,12 @@ img {
     flex-direction: column;
     justify-content: center;
     height: 100%;
+    transition: transform;
+    transition-duration: 1s;
+}
+
+.catalog_item:hover {
+    transform: scale(1.05);
 }
 
 .catalog_text_box {
@@ -187,8 +280,31 @@ img {
     align-items: center;
 }
 
+.product_img_box {
+    position: relative;
+}
+
+.product_img {
+    position: absolute;
+    z-index: 2;
+    transition: all;
+    transition-duration: 0.3s;
+}
+
+.product_img_link {
+    display: block;
+    position: absolute;
+    z-index: 1;
+}
+
+.product_img_box:hover .product_img {
+    z-index: 0;
+}
+
 .product_item {
     background: #F8F8F8;
+    display: grid;
+    grid-template-rows: 420px auto;
 }
 
 .products_title {
@@ -257,6 +373,8 @@ img {
     height: 48px;
     display: flex;
     align-items: center;
+    transition: color, background-color;
+    transition-duration: 1s;
 }
 
 .product_button_text {
@@ -267,6 +385,16 @@ img {
     line-height: 19px;
     color: #F26376;
     text-align: center;
+}
+
+.product_button:hover {
+    background-color: #F26376;
+}
+
+.product_button:hover .product_button_text {
+    transition: color;
+    transition-duration: 1s;
+    color: white;
 }
 
 .offers {
@@ -281,6 +409,12 @@ img {
 .offer_item {
     width: 360px;
     height: 134px;
+    transition: transform;
+    transition-duration: 1s;
+}
+
+.offer_item:hover {
+    transform: scale(1.05);
 }
 
 .offer_link {
@@ -387,20 +521,22 @@ img {
 }
 
 .subscribe_form_email {
-    width: 100%;
+    width: auto;
     height: 49px;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
     background: #E1E1E1;
     border: none;
     padding-left: 25px;
+    padding-right: 25px;
 }
 
 .button_subscribe {
     width: 100%;
-    height: 49px;
+    height: 47px;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
+    border: solid 1px #E05C6E;
     background: #E05C6E;
     font-style: normal;
     font-weight: 400;
@@ -410,6 +546,13 @@ img {
     align-items: center;
     justify-content: center;
     color: #FFFFFF;
+}
+
+.button_subscribe:hover {
+    transition: color, background;
+    transition-duration: 1s;
+    color: #E05C6E;
+    background: #FFFFFF;
 }
 
 .footer {
@@ -436,6 +579,11 @@ img {
 .footer_icons {
     display: flex;
     gap: 7px;
+}
+
+.icon path {
+    transition: fill;
+    transition-duration: 1s;
 }
 
 .footer_icon:hover path {
@@ -530,6 +678,9 @@ img {
         height: 23px;
         margin: 25px 16px 26px;
     }
+    .link_additional {
+        width: 0;
+    }
     .top {
         width: 100vw;
         height: 363px;
@@ -589,7 +740,7 @@ img {
         margin-left: 8px;
         margin-right: 8px;
         grid-template-rows: auto;
-        grid-template-columns: 100%;
+        grid-template-columns: 304px;
         gap: 16px;
     }
     .product_text_box {
@@ -649,7 +800,6 @@ img {
         margin-top: 59px;
     }
     .subscribe_form_email {
-        width: 100%;
         height: 47px;
         border-top-left-radius: 23px;
         border-bottom-left-radius: 23px;
@@ -657,7 +807,7 @@ img {
     }
     .button_subscribe {
         width: 100%;
-        height: 47px;
+        height: 45px;
         border-top-right-radius: 23px;
         border-bottom-right-radius: 23px;
     }
